@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   color: #333;
 }
 
-/* Navigation bar at the top */
+
 nav.top {
   background-color: #3b5998;
   color: white;
@@ -45,7 +45,7 @@ button {
   cursor: pointer;
 }
 
-/* Brand and Search Bar */
+
 section.brand {
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@ section.brand input[type="text"] {
   text-decoration: underline;
 }
 
-/* Slideshow */
+
 .slideshow {
   position: relative;
   max-width: 100%;
