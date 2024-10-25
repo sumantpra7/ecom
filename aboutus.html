@@ -1,30 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>foddie</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIE - About Owner</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Body and Background */
+      body {
+        background-color: #08e0f4;
+        color: blueviolet;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+      }
+
+      /* Button Styling */
+      button {
+        background-color: black;
+        color: rgb(215, 238, 9);
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin: 20px 0;
+        transition: background-color 0.3s ease;
+        font-size: 1em;
+        cursor: pointer;
+      }
+
+      button a {
+        color: rgb(235, 15, 15);
+        text-decoration: none;
+      }
+
+      button:hover {
+        background-color: #030303;
+      }
+
+      /* Main Content Styling */
+      .home {
+        text-align: center;
+        background-color: #000000;
+        color: blueviolet;
+      }
+
+      .home .inner {
+        padding: 20px;
+        border-radius: 15px;
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      .home img {
+        border-radius: 30px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+        width: 250px;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* About Section Styling */
+      .content {
+        max-width: 600px;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.1);
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .content h1 {
+        font-size: 1.8em;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      .content p {
+        font-size: 1em;
+        color: #ffdde5;
+        line-height: 1.5;
+      }
+
+      /* Footer Styling */
+      footer {
+        text-align: center;
+        color: rgb(85, 225, 15);
+        margin-top: 50px;
+      }
+
+      footer h5 {
+        font-size: 0.8em;
+        color: white;
+        text-decoration: underline;
+      }
+
+      /* Responsive Styling */
+      @media (max-width: 768px) {
+        .content {
+          max-width: 90%;
+        }
+
+        button {
+          padding: 8px 15px;
+          font-size: 0.9em;
+        }
+      }
+    </style>
   </head>
-  <body style="background-color: #ef4478;">
-    <script src="script.js"></script>
-    <button style="background-color: black;border-radius: 10px; padding: 10px;"><a href="index.html"> Back to home page </a></button>
-    <section class="home" id="home" style="background-color: #ef4478; color:blueviolet;">
-        <div class="inner">  
-          <img src="images/profile3.jpg" alt="sumant kumar" width="250px" style="border-radius: 30px;"/>
-          <h1>sumant kumar</h1> 
-          <h3>developer of this website</h3>   
-        </div>  
+
+  <body>
+    <!-- Back to Home Button -->
+    <button><a href="index.html">Back to Home Page</a></button>
+
+    <!-- Owner Profile Section -->
+    <section class="home" id="home">
+      <div class="inner">  
+        <img src="images/profile3.jpg" alt="Sumant Kumar" class="profile-img" />
+        <h1 class="title">Sumant Kumar</h1> 
+        <h3 class="subtitle">Developer of this website</h3>   
+      </div>  
     </section>
-    <div>
-        <h1>About Owner:</h1>
-        
-        <p>I'm currently a bsc computer application and cyber security 2nd year student in 'Jharkhand raksha sakti university' in Ranchi...and my goal is to become a software developer and i'm trying my level best to make that goal success...and i love to learn and make product which make people life easy!.</p>
-        <p>I AM SO SOORY I HAVE NOT LEARNED THE BACKEND PART BUT DEFINATLY MAKE AGOOD BACKEND FOR THIS WEBSITE </p>
+
+    <div class="content">
+      <h1>About Owner:</h1>
+      <p>I'm currently a BSc Computer Application and Cyber Security 2nd year student at 'Jharkhand Raksha Shakti University' in Ranchi. My goal is to become a software developer, and I'm working hard to achieve that. I love learning and creating products that make people's lives easier!</p>
+      <p>I apologize as I haven't yet learned the backend part, but I'll definitely build a great backend for this website in the future!</p>
     </div>
-    <div>
-    <footer style="text-align: center; padding-top: 50px;">
-        <h5 style="text-decoration-line: underline;"><b>Copyright To - sumant kumar</b><h5>
+
+    <!-- Footer -->
+    <footer>
+      <h5>&copy; Copyright To - Sumant Kumar</h5>
     </footer>
+
+    <!-- JavaScript for Dynamic Effects -->
+    <script>
+      // Simple animation for title and subtitle
+      document.addEventListener("DOMContentLoaded", function() {
+        const title = document.querySelector('.title');
+        const subtitle = document.querySelector('.subtitle');
+        
+        // Fading in effect
+        title.style.opacity = 0;
+        subtitle.style.opacity = 0;
+
+        setTimeout(() => { title.style.transition = "opacity 1s"; title.style.opacity = 1; }, 500);
+        setTimeout(() => { subtitle.style.transition = "opacity 1s"; subtitle.style.opacity = 1; }, 1000);
+      });
+    </script>
   </body>
 </html>
