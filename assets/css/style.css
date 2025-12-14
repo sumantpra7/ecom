@@ -1,0 +1,44 @@
+/* Global Variables */
+:root {
+    --primary-color: #6f42c1; /* Slateblue match */
+    --secondary-color: #fd7e14;
+    --text-dark: #333;
+    --text-light: #6c757d;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+}
+
+/* Navbar */
+.navbar-brand {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: var(--primary-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('../../images/hero-bg.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Product Cards */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
